@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viaja con Gris y Aurora | Agencia Los Agaves</title>
+
+  <!-- Google Fonts: Poppins / Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-fuchsia: #E91E63;
+      --fuchsia-hover: #D81B60;
+      --secondary-gold: #FFC107;
+      --whatsapp-green: #25D366;
+      --whatsapp-hover: #1EBE5D;
+      --facebook-blue: #1877F2;
+      --text-color: #2D3748;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 16px;
+      position: relative;
+      background-color: #111827;
+      /* Imagen de fondo de campos de agave traslúcida y fija */
+      background-image: 
+        linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
+        url('https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .main-card {
+      width: 100%;
+      max-width: 440px;
+      /* Recuadro blanco más traslúcido para ver claramente la imagen del fondo */
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Logotipo con contornos redondeados preservando dimensiones originales */
+    .logo-container {
+      width: 100%;
+      max-width: 260px;
+      margin-bottom: 24px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      padding: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .tagline {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--primary-fuchsia);
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    /* Grupo de Botones */
+    .buttons-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 16px;
+      font-size: 0.98rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: #ffffff;
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    /* Estilos específicos para cada red social y botón */
+    .btn-instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .btn-facebook {
+      background-color: var(--facebook-blue);
+    }
+
+    /* Contenedor de WhatsApp al mismo nivel (lado a lado) */
+    .whatsapp-row {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn-whatsapp {
+      flex: 1;
+      background-color: var(--whatsapp-green);
+      font-size: 0.88rem;
+      padding: 14px 10px;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--whatsapp-hover);
+    }
+
+    .btn i {
+      font-size: 1.35rem;
+    }
+
+    /* Footer con privacidad y desarrollador */
+    footer {
+      width: 100%;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      padding-top: 18px;
+      font-size: 0.78rem;
+      color: #4A5568;
+      line-height: 1.5;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .credits {
+      font-weight: 700;
+      color: #2D3748;
+    }
+
+    .credits a {
+      color: #1E40AF;
+      text-decoration: none;
+      font-weight: 800;
+      transition: color 0.2s;
+    }
+
+    .credits a:hover {
+      color: var(--primary-fuchsia);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main-card">
+    
+    <!-- Logotipo enmarcado con contornos redondeados -->
+    <div class="logo-container">
+      <img src="logo-Viaja con Gris y Aurora.png" alt="Viaja con Gris y Aurora - Viajes y Tours">
+    </div>
+
+    <p class="tagline">Agencia Viajes Los Agaves</p>
+
+    <!-- Botones de Navegación y Contacto -->
+    <div class="buttons-container">
+      
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/grisyauroradeviajeslosagaves?vrfl=MTc4amg1YXhzM3p6ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-instagram" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/19wUEvnEDM/?mibextid=wwXIfr" target="_blank" class="btn btn-facebook" rel="noopener">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span>Facebook</span>
+      </a>
+
+      <!-- WhatsApps lado a lado -->
+      <div class="whatsapp-row">
+        <!-- Gris -->
+        <a href="https://wa.me/523310467836?text=%C2%A1Hola%20Gris!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Contacta a Gris</span>
+        </a>
+
+        <!-- Aurora -->
+        <a href="https://wa.me/523339575211?text=%C2%A1Hola%20Aurora!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Contacta a Aurora</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Leyenda y Créditos -->
+    <footer style="text-align: center; font-size: 0.75em; color: #aaa; line-height: 1.6;">
+  <p style="margin-bottom: 4px;">
+    © Gris y Aurora de Viajes Los Agaves. Todos los derechos reservados.
+  </p>
+  <p style="margin-top: 0;">
+    Desarrollado por <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/" target="_blank" style="color: #fff; font-weight: bold; text-decoration: none;">Nexum IT Solutions</a> | 
+    <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#privacidad" target="_blank" style="color: #aaa; text-decoration: underline;">Aviso de Privacidad</a> | 
+    <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#terminos" target="_blank" style="color: #aaa; text-decoration: underline;">Términos y Condiciones</a>
+  </p>
+</footer>
+
+  </main>
+
+</body>
+</html>
