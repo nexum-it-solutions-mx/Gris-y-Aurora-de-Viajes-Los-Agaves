@@ -184,6 +184,20 @@
       color: var(--primary-fuchsia);
       text-decoration: underline;
     }
+
+    .btn-share {
+  background: linear-gradient(135deg, #00d2ff, #1e6bf5);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-share:hover {
+  background: linear-gradient(135deg, #00b8e6, #1858cc);
+  box-shadow: 0 8px 20px rgba(0, 210, 255, 0.35);
+}
+    
   </style>
 </head>
 <body>
@@ -199,6 +213,12 @@
 
     <!-- Botones de Navegación y Contacto -->
     <div class="buttons-container">
+
+      <!-- Botón Compartir Página -->
+    <button type="button" class="btn btn-share" id="btnShare">
+       <i class="fa-solid fa-share-nodes"></i>
+       <span>Compartir esta página</span>
+    </button>
       
       <!-- Instagram -->
       <a href="https://www.instagram.com/grisyauroradeviajeslosagaves?vrfl=MTc4amg1YXhzM3p6ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-instagram" rel="noopener">
