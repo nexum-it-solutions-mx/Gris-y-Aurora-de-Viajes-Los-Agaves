@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viaja con Gris y Aurora | Agencia Los Agaves</title>
 
-  <!-- Google Fonts: Poppins / Montserrat -->
+  <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,44 +36,45 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 16px;
+      padding: 24px 16px;
       position: relative;
-      background-color: #111827;
+      background-color: #0f172a;
       /* Imagen de fondo de campos de agave traslúcida y fija */
       background-image: 
-        linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
+        linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.45)),
         url('https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1920&auto=format&fit=crop');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
     }
 
+    /* Recuadro principal cristalino y traslúcido para ver la imagen de fondo */
     .main-card {
       width: 100%;
       max-width: 440px;
-      /* Recuadro blanco más traslúcido para ver claramente la imagen del fondo */
-      background: rgba(255, 255, 255, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      /* Valor muy traslúcido (0.48) para visualizar la imagen de fondo claramente */
+      background: rgba(255, 255, 255, 0.48);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-radius: 28px;
       padding: 32px 24px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    /* Logotipo con contornos redondeados preservando dimensiones originales */
+    /* Logotipo intacto con contornos redondeados */
     .logo-container {
       width: 100%;
-      max-width: 260px;
-      margin-bottom: 24px;
-      border-radius: 22px;
+      max-width: 270px;
+      margin-bottom: 20px;
+      border-radius: 24px;
       overflow: hidden;
       background: #ffffff;
-      padding: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      padding: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
 
     .logo-container img {
@@ -84,12 +85,13 @@
     }
 
     .tagline {
-      font-size: 0.92rem;
-      font-weight: 700;
+      font-size: 0.95rem;
+      font-weight: 800;
       color: var(--primary-fuchsia);
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       margin-bottom: 24px;
       text-transform: uppercase;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
     /* Grupo de Botones */
@@ -98,7 +100,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .btn {
@@ -113,22 +115,27 @@
       font-weight: 800;
       text-decoration: none;
       color: #ffffff;
+      border: none;
+      cursor: pointer;
       transition: all 0.25s ease-in-out;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
     }
 
-    /* Estilos específicos para cada red social y botón */
     .btn-instagram {
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     }
 
     .btn-facebook {
       background-color: var(--facebook-blue);
+    }
+
+    .btn-share {
+      background: linear-gradient(135deg, #00d2ff, #1e6bf5);
     }
 
     /* Contenedor de WhatsApp al mismo nivel (lado a lado) */
@@ -141,8 +148,8 @@
     .btn-whatsapp {
       flex: 1;
       background-color: var(--whatsapp-green);
-      font-size: 0.88rem;
-      padding: 14px 10px;
+      font-size: 0.86rem;
+      padding: 14px 8px;
     }
 
     .btn-whatsapp:hover {
@@ -150,54 +157,8 @@
     }
 
     .btn i {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
     }
-
-    /* Footer con privacidad y desarrollador */
-    footer {
-      width: 100%;
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
-      padding-top: 18px;
-      font-size: 0.78rem;
-      color: #4A5568;
-      line-height: 1.5;
-    }
-
-    footer p {
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-
-    .credits {
-      font-weight: 700;
-      color: #2D3748;
-    }
-
-    .credits a {
-      color: #1E40AF;
-      text-decoration: none;
-      font-weight: 800;
-      transition: color 0.2s;
-    }
-
-    .credits a:hover {
-      color: var(--primary-fuchsia);
-      text-decoration: underline;
-    }
-
-    .btn-share {
-  background: linear-gradient(135deg, #00d2ff, #1e6bf5);
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.btn-share:hover {
-  background: linear-gradient(135deg, #00b8e6, #1858cc);
-  box-shadow: 0 8px 20px rgba(0, 210, 255, 0.35);
-}
-    
   </style>
 </head>
 <body>
@@ -206,19 +167,13 @@
     
     <!-- Logotipo enmarcado con contornos redondeados -->
     <div class="logo-container">
-      <img src="logo_Gris_y_Aurora.png" alt="Viaja con Gris y Aurora de Viajes Los Agaves">
+      <img src="logo-Viaja con Gris y Aurora.png" alt="Viaja con Gris y Aurora - Agencia Los Agaves">
     </div>
 
-    <p class="tagline">Viaja con Gris y Aurora de Viajes Los Agaves</p>
+    <p class="tagline">Agencia Viajes Los Agaves</p>
 
     <!-- Botones de Navegación y Contacto -->
     <div class="buttons-container">
-
-      <!-- Botón Compartir Página -->
-    <button type="button" class="btn btn-share" id="btnShare">
-       <i class="fa-solid fa-share-nodes"></i>
-       <span>Compartir esta página</span>
-    </button>
       
       <!-- Instagram -->
       <a href="https://www.instagram.com/grisyauroradeviajeslosagaves?vrfl=MTc4amg1YXhzM3p6ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-instagram" rel="noopener">
@@ -247,21 +202,71 @@
         </a>
       </div>
 
+      <!-- Botón Compartir la página -->
+      <button type="button" class="btn btn-share" id="btnShare">
+        <i class="fa-solid fa-share-nodes"></i>
+        <span>Compartir esta página</span>
+      </button>
+
     </div>
 
-    <!-- Leyenda y Créditos -->
+    <!-- Leyenda y Créditos solicitados -->
     <footer style="text-align: center; font-size: 0.75em; color: #050000; line-height: 1.6;">
-  <p style="margin-bottom: 4px;">
-    © Gris y Aurora de Viajes Los Agaves. Todos los derechos reservados.
-  </p>
-  <p style="margin-top: 0;">
-    Desarrollado por <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/" target="_blank" style="color: #fff; font-weight: bold; text-decoration: none;">Nexum IT Solutions</a> | 
-    <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#privacidad" target="_blank" style="color: #050000; text-decoration: underline;">Aviso de Privacidad</a> | 
-    <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#terminos" target="_blank" style="color: #050000; text-decoration: underline;">Términos y Condiciones</a>
-  </p>
-</footer>
+      <p style="margin-bottom: 4px;">
+        © Gris y Aurora de Viajes Los Agaves. Todos los derechos reservados.
+      </p>
+      <p style="margin-top: 0;">
+        Desarrollado por <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/" target="_blank" style="color: #fff; font-weight: bold; text-decoration: none;">Nexum IT Solutions</a> | 
+        <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#privacidad" target="_blank" style="color: #050000; text-decoration: underline;">Aviso de Privacidad</a> | 
+        <a href="https://nexum-it-solutions-mx.github.io/Bienvenidos/legal.html#terminos" target="_blank" style="color: #050000; text-decoration: underline;">Términos y Condiciones</a>
+      </p>
+    </footer>
 
   </main>
+
+  <!-- Script para el botón Compartir -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnShare = document.getElementById("btnShare");
+
+      if (btnShare) {
+        btnShare.addEventListener("click", async () => {
+          const shareData = {
+            title: "Viaja con Gris y Aurora | Agencia Los Agaves",
+            text: "¡Conoce los mejores paquetes de viajes y tours con Gris y Aurora de Agencia Los Agaves!",
+            url: window.location.href
+          };
+
+          if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+            try {
+              await navigator.share(shareData);
+            } catch (error) {
+              if (error.name !== "AbortError") {
+                console.error("Error al compartir:", error);
+              }
+            }
+          } else {
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(window.location.href);
+                alert("¡Enlace de la página copiado al portapapeles!");
+              } else {
+                const tempInput = document.createElement("input");
+                tempInput.value = window.location.href;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                alert("¡Enlace de la página copiado al portapapeles!");
+              }
+            } catch (err) {
+              alert("Puedes copiar la URL directamente desde la barra de direcciones.");
+            }
+          }
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
