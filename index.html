@@ -52,8 +52,7 @@
     .main-card {
       width: 100%;
       max-width: 440px;
-      /* Valor muy traslúcido (0.48) para visualizar la imagen de fondo claramente */
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.48);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-radius: 28px;
@@ -94,7 +93,7 @@
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-    /* Grupo de Botones */
+    /* Grupo de Botones Principal */
     .buttons-container {
       width: 100%;
       display: flex;
@@ -138,26 +137,41 @@
       background: linear-gradient(135deg, #00d2ff, #1e6bf5);
     }
 
-    /* Contenedor de WhatsApp al mismo nivel (lado a lado) */
+    /* Contenedor ÚNICAMENTE para los 2 WhatsApps directos (Lado a lado 50%/50%) */
     .whatsapp-row {
       display: flex;
       gap: 12px;
       width: 100%;
     }
 
-    .btn-whatsapp {
+    .btn-whatsapp-direct {
       flex: 1;
       background-color: var(--whatsapp-green);
       font-size: 0.86rem;
       padding: 14px 8px;
     }
 
-    .btn-whatsapp:hover {
+    .btn-whatsapp-direct:hover {
       background-color: var(--whatsapp-hover);
+    }
+
+    /* Botón independiente para el Canal de WhatsApp (Ancho completo 100%) */
+    .btn-whatsapp-channel {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #ffffff;
+      font-size: 0.85rem;
+      line-height: 1.35;
+      padding: 14px 12px;
+    }
+
+    .btn-whatsapp-channel:hover {
+      background: linear-gradient(135deg, #20ba5a, #0e6f64);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
     }
 
     .btn i {
       font-size: 1.3rem;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -175,43 +189,41 @@
     <!-- Botones de Navegación y Contacto -->
     <div class="buttons-container">
       
-      <!-- Instagram -->
+      <!-- 1. Instagram -->
       <a href="https://www.instagram.com/grisyauroradeviajeslosagaves?vrfl=MTc4amg1YXhzM3p6ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-instagram" rel="noopener">
         <i class="fa-brands fa-instagram"></i>
         <span>Instagram</span>
       </a>
 
-      <!-- Facebook -->
+      <!-- 2. Facebook -->
       <a href="https://www.facebook.com/share/19wUEvnEDM/?mibextid=wwXIfr" target="_blank" class="btn btn-facebook" rel="noopener">
         <i class="fa-brands fa-facebook-f"></i>
         <span>Facebook</span>
       </a>
 
-      <!-- WhatsApps lado a lado -->
+      <!-- 3. WhatsApps directos (Mismo nivel: Gris y Aurora lado a lado) -->
       <div class="whatsapp-row">
-        <!-- Gris -->
-        <a href="https://wa.me/523310467836?text=%C2%A1Hola%20Gris!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp" rel="noopener">
+        <a href="https://wa.me/523310467836?text=%C2%A1Hola%20Gris!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp-direct" rel="noopener">
           <i class="fa-brands fa-whatsapp"></i>
           <span>Contacta a Gris</span>
         </a>
 
-        <!-- Aurora -->
-        <a href="https://wa.me/523339575211?text=%C2%A1Hola%20Aurora!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp" rel="noopener">
+        <a href="https://wa.me/523339575211?text=%C2%A1Hola%20Aurora!%20Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20un%20viaje." target="_blank" class="btn btn-whatsapp-direct" rel="noopener">
           <i class="fa-brands fa-whatsapp"></i>
           <span>Contacta a Aurora</span>
         </a>
-
-        <!-- Botón Canal de WhatsApp de Gris & Aurora -->
-        <a href="https://whatsapp.com/channel/0029VbDcOdJ1SWt8SZW17T2o" target="_blank" class="btn btn-whatsapp-channel" rel="noopener">
-         <i class="fa-brands fa-whatsapp"></i>
-         <span>Sigue el canal de GRIS & AURORA Viajes y Tours en WhatsApp</span>
-       </a>
       </div>
 
-      <!-- Botón Compartir la página -->
+      <!-- 4. Botón Canal de WhatsApp (Fila independiente abajo) -->
+      <a href="https://whatsapp.com/channel/0029VbDcOdJ1SWt8SZW17T2o" target="_blank" class="btn btn-whatsapp-channel" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Sigue el canal de GRIS & AURORA Viajes y Tours en WhatsApp</span>
+      </a>
+
+      <!-- 5. Botón Compartir la página -->
       <button type="button" class="btn btn-share" id="btnShare">
         <i class="fa-solid fa-share-nodes"></i>
-        <span>Compartir esta Tarjeta</span>
+        <span>Compartir esta página</span>
       </button>
 
     </div>
